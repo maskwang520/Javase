@@ -1,0 +1,5 @@
+package com.serilizeabledemo.entity;
+
+public enum Gender {
+
+}

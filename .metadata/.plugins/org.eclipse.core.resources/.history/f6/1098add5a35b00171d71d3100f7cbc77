@@ -1,0 +1,5 @@
+package com.readresolvedemo.entity;
+
+public class Person {
+
+}

@@ -1,0 +1,5 @@
+package com.serilizeabledemo.transiententity;
+
+public class Person {
+
+}

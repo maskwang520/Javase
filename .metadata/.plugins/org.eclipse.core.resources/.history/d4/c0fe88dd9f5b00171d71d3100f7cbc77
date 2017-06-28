@@ -1,0 +1,5 @@
+package com.externalizabledemo.entity;
+
+public class Person {
+
+}

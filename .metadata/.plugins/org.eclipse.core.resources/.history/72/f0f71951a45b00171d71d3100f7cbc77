@@ -1,0 +1,10 @@
+package com.readresolvedemo.entity;
+
+import org.junit.Test;
+
+public class ReadResovleTest {
+	@Test
+	public void readResolve(){
+		
+	}
+}
