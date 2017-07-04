@@ -1,0 +1,8 @@
+package com.java.enumdemo;
+
+public enum EnumDemo2 {
+	private int index;
+    private String name;
+    private String value;
+    public abstract Day getNext();
+}

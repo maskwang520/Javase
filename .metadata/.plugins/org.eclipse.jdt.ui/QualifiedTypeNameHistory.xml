@@ -14,4 +14,8 @@
 <fullyQualifiedTypeName name="com.serilizeabledemo.entity.Gender"/>
 <fullyQualifiedTypeName name="com.readresolvedemo.entity.Person"/>
 <fullyQualifiedTypeName name="java.io.ObjectStreamException"/>
+<fullyQualifiedTypeName name="java.lang.reflect.Field"/>
+<fullyQualifiedTypeName name="com.java.annotation.RepeatAnnotations"/>
+<fullyQualifiedTypeName name="java.lang.annotation.Repeatable"/>
+<fullyQualifiedTypeName name="com.java.annotation.RepeatAnnotation"/>
 </qualifiedTypeNameHistroy>
