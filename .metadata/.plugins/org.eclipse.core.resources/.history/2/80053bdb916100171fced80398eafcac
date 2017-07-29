@@ -1,0 +1,30 @@
+package com.java.arraystreamdemo;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+
+public class ArrayStreamDemo {
+
+	public static void main(String[] args) throws Throwable {
+//		FileOutputStream fos1=new FileOutputStream(new File("e:\\test.txt"));
+//		fos1.write(97);
+//		fos1.write(98);
+//		fos1.write(99);
+//		byte []b={97,98,'c'};
+//		fos1.write(b,0,1);
+//		fos1.close();
+		FileInputStream in=new FileInputStream("e:\\test.txt");
+		int data;
+		do{
+			data=in.read();
+			System.out.print((char)in.read());
+		}while(data!=-1);
+	
+			
+			
+
+	}
+
+}

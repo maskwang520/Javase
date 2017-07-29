@@ -1,0 +1,47 @@
+package com.java.pipedemo;
+
+import java.io.IOException;
+import java.io.PipedInputStream;
+import java.io.PipedOutputStream;
+
+public class PipeExample {
+
+	public static void main(String[] args) {
+		final PipedOutputStream pout=new PipedOutputStream();
+		final PipedInputStream pin=new PipedInputStream();
+		Thread thread1=new Thread(new Runnable() {
+			@Override
+			public void run() {
+				try {
+					pout.write("hello world".getBytes());
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				
+			}
+		});
+		Thread thread2=new Thread(new Runnable() {
+			@Override
+			public void run() {
+				
+				int data;
+				try {
+					data = pin.read();
+				
+				while(data!=-1){
+					System.out.println((char)data);
+					
+						data=pin.read();
+				}
+					} catch (IOException e) {
+						
+						e.printStackTrace();
+					}
+				}
+			
+		});
+
+}
+
+}

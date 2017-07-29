@@ -1,5 +1,0 @@
-package com.java.annotation;
-
-public @interface RepeatAnnotations {
-	 RepeatAnnotation[] value();//ÖØ¸´×¢½â
-}

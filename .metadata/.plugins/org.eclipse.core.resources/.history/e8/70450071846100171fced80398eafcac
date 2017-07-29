@@ -1,0 +1,10 @@
+package com.java.filedeo;
+
+import java.io.File;
+
+public class FileDemo {
+	public static void main(String []args){
+		File file =new File("e:/test.txt");
+		System.out.println(file.exists());
+	}
+}

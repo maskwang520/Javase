@@ -1,0 +1,46 @@
+package com.java.filedeo;
+
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+/**
+ * file 方面inputstream和outputStream的应用
+ * @author maskwang
+ *
+ */
+public class FileIoDemo {
+
+	public static void main(String[] args) throws IOException {
+		File f=new File("data.txt");
+//		FileOutputStream fout=new FileOutputStream(f);
+//		byte [] b="hello maskwang".getBytes();
+//		byte []b1=new byte[5];
+//		char []c=new char[20];
+//		fout.write(b);
+//		fout.close();
+//		System.out.println();
+//	    FileInputStream fin=new FileInputStream(f);
+//	    int i;
+//	    while((i=fin.read())!=-1){
+//	    	System.out.print((char)(i));
+//		}
+//	    System.out.println(fin.read(b1));
+//	    System.out.println(new String(b1));
+//	    fin.close();
+		FileWriter fwrite=new FileWriter(f);
+		fwrite.write("中国,我爱你");
+		fwrite.close();
+		char []c=new char[6];
+		FileReader fread=new FileReader(f);
+		int i;
+		while((i=fread.read(c))!=-1){
+			System.out.println(new String(c));
+		}
+		fread.close();
+		
+
+	}
+
+}

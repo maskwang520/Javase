@@ -1,0 +1,14 @@
+package com.java.arraystreamdemo;
+
+import java.util.Stack;
+
+public class Solution {
+	public boolean IsPopOrder(int [] pushA,int [] popA) {
+	    for(int i=pushA.length-1;i>=0;i++){
+	    	if(popA[0]==pushA[i])
+	    		break;
+	    }
+		
+		return false;
+    }
+}

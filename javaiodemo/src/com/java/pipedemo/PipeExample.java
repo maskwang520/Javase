@@ -1,0 +1,65 @@
+package com.java.pipedemo;
+
+import java.io.IOException;
+import java.io.PipedInputStream;
+import java.io.PipedOutputStream;
+/**
+ * 管道流，切记流的关闭
+ * @author maskwang
+ *
+ */
+public class PipeExample {
+
+	public static void main(String[] args) throws IOException {
+		final PipedOutputStream pout = new PipedOutputStream();
+		final PipedInputStream pin = new PipedInputStream(pout);
+		Thread thread1 = new Thread(new Runnable() {
+			@Override
+			public void run() {
+				try {
+					pout.write("hello world".getBytes());
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}finally{
+					
+					try {
+						pout.close();
+					} catch (IOException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+				}
+
+			}
+		});
+		Thread thread2 = new Thread(new Runnable() {
+			@Override
+			public void run() {
+				int data;
+				try {
+					data = pin.read();
+					while (data != -1) {
+						System.out.print((char) data);
+						data = pin.read();
+					}
+				} catch (IOException e) {
+
+					e.printStackTrace();
+				}finally{
+					try {
+						pin.close();
+					} catch (IOException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+				}
+			}
+
+		});
+		thread1.start();
+		thread2.start();
+
+	}
+
+}

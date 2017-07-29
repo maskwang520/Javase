@@ -1,0 +1,22 @@
+package com.externalizabledemo.entity;
+
+public class Solution {
+	
+	 public ListNode Merge(ListNode list1,ListNode list2) {
+	        
+	    }
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}
+class ListNode {
+    int val;
+    ListNode next = null;
+
+    ListNode(int val) {
+        this.val = val;
+    }
+}

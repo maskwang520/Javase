@@ -1,0 +1,34 @@
+package com.java.filedeo;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class FileIoDemo {
+
+	public static void main(String[] args) throws IOException {
+		File f=new File("data.txt");
+		FileOutputStream fout=new FileOutputStream(f);
+		byte [] b="hello maskwang".getBytes();
+		byte []b1=new byte[5];
+		char []c=new char[20];
+		fout.write(b);
+		fout.close();
+//	    FileInputStream fin=new FileInputStream(f);
+//	    int i;
+//	    while((i=fin.read())!=-1){
+//	    	System.out.print((char)(i));
+//		}
+//	    System.out.println(fin.read(b1));
+//	    System.out.println(new String(b1));
+//	    fin.close();
+		FileReader fread=new FileReader(f);
+		fread.read(c);
+		System.out.println(c);
+		
+
+	}
+
+}

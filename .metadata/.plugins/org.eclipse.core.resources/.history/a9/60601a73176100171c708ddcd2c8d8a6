@@ -1,0 +1,16 @@
+package com.externalizabledemo.entity;
+
+public class Solution {
+	public ListNode FindKthToTail(ListNode head,int k) {
+
+    }
+}
+
+ class ListNode {
+    int val;
+    ListNode next = null;
+
+    ListNode(int val) {
+        this.val = val;
+    }
+}

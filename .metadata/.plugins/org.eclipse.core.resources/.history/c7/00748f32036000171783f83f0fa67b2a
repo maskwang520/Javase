@@ -1,8 +1,0 @@
-package com.java.annotation;
-
-import java.lang.annotation.Repeatable;
-
-@Repeatable(RepeatAnnotations.class)
-public @interface RepeatAnnotation {
-	String role();;
-}

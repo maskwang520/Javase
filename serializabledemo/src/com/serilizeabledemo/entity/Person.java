@@ -8,6 +8,8 @@ import java.io.Serializable;
  *
  */
 public class Person implements Serializable {
+	private static final long serialVersionUID = 1L;//保证版本号，
+	//在序列化的时候，会检查这个
 	private String name;
 	private int age;
 	private Gender gender;

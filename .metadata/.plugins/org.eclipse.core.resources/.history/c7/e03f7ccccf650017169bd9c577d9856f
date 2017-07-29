@@ -1,0 +1,36 @@
+package com.java.filedeo;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Stack;
+
+public class Solution {
+	public ArrayList<Integer> PrintFromTopToBottom(TreeNode root) {
+		Stack<TreeNode> stack=new Stack<>();
+		ArrayList<Integer>list=new ArrayList<>();
+		if(root==null){
+			return null;
+		}
+		stack.push(root);
+		while(!stack.isEmpty()){
+			TreeNode t=stack.pop();
+			list.add(t.val);
+			if(t.left!=null)
+				stack.push(t.left);
+			if(t.right!=null)
+				stack.push(t.right);
+		}
+		return list;
+	}
+}
+
+class TreeNode {
+	int val = 0;
+	TreeNode left = null;
+	TreeNode right = null;
+
+	public TreeNode(int val) {
+		this.val = val;
+
+	}
+}

@@ -1,0 +1,25 @@
+package com.java.arraystreamdemo;
+
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+
+public class ArrayStreamDemo {
+
+	public static void main(String[] args) throws IOException {
+		byte []b=new byte[1024];
+		byte []bytes="hello maskwang".getBytes();
+		InputStream in=new ByteArrayInputStream(bytes);
+		int data=in.read();
+		while(data!=-1){
+			System.out.print((char)data);
+			data=in.read();
+		}
+		in.reset();
+		in.read(b);
+		System.out.println(b);
+		in.close();
+
+	}
+
+}

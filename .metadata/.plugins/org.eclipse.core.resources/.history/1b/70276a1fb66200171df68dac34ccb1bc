@@ -1,0 +1,17 @@
+package com.java.filedeo;
+
+import java.io.File;
+/**
+ * 文件常见操作
+ * @author maskwang
+ *
+ */
+public class FileDemo {
+	 private  String line = System.getProperty("line.separator");
+	    private  String separator_Path = System.getProperty("file.separator");
+	public static void main(String []args){
+		//获取系统的行分隔符,文件分隔符
+	   
+
+	}
+}

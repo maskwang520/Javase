@@ -1,0 +1,9 @@
+package com.java.arraystreamdemo;
+
+public class Solution {
+
+	public ArrayList<Integer> printMatrix(int[][] matrix) {
+
+	}
+
+}
